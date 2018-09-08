@@ -37,31 +37,13 @@ public class ListUtil {
 	 * @return position of element in array
 	 */
 	public static <T extends Comparable<? super T>> int binarySearch(T[] array, T element) {
-
 		Arrays.sort(array);
-
-		int lengthArray = array.length - 1;
-		int firstNum = 0;
-		
 		if(element == null){
 			throw new IllegalArgumentException("Search element must not be null");
 		}
-
-		while (lengthArray >= firstNum) {
-
-			int num = (((lengthArray + firstNum) / 2));
-
-			if (array[num].equals(element)) {
-				return num;
-			}
-			if (array[num].compareTo(element) > 0) {
-				lengthArray = num - 1;
-			} else {
-				firstNum = num + 1;
-			}
-		}
-
-		return -1;
+		if(Arrays.binarySearch(array, element) < 0) return -1;
+		
+		else return Arrays.binarySearch(array, element);
 
 	}
 
