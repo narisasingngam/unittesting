@@ -2,7 +2,7 @@
 
 ## Count Unique
 
-| Take case           | Case   | Returned |
+| Take case           | Case   | Return |
 | ---                 | ---    | ---      |
 | Empty list    | [ ] | 0 |
 | Null | Null  | IllegalArgumentException  |
@@ -13,10 +13,10 @@
 
 ## Binary Search
 
-| Take case           | Case   | Returned |
+| Take case           | Case   | Return |
 | ---                 | ---    | ---      |
 | Binary search    | ["a","b","c","d"] search "c" | 2 |
 | Sort binary search | ["z","a","d","b"] search "z" | 3  |
 | Incorrect binary search | ["a","b","c"]  search "mint" | -1 |
 | Null | ["a","a","b","c"]  search null  | throw IllegalArgumentException |
-
+| Huge list | [1,2,3,4,5,...,100000]  search 50000  | 50000 |
