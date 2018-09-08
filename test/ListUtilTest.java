@@ -76,17 +76,28 @@ public class ListUtilTest {
 	@Test
 	public void testIncorrectBinarySearch(){
 		String [] array = {"a","b","c"};
-		assertEquals(-1, ListUtil.binarySearch(array, "mint"));
+		assertEquals(-1, ListUtil.binarySearch(array, "m"));
+		assertEquals(-1, ListUtil.binarySearch(array, "j"));
 	}
 	
-	/** Test expected IllegalArgumentException */
+	/** Test throw IllegalArgumentException */
 	@Test (expected = IllegalArgumentException.class)
 	public void testIllegalArgumentException(){
 		String []array = {"a","b","c"};
 		ListUtil.binarySearch(array,null);
 	}
 	
-//	@Test
+	/** Test huge list in binary search */
+	@Test (timeout = 500)
+	public void testBinaryHugeList(){
+		int num = 100000;
+		List<Integer> list = new ArrayList<>(); 
+		for (int i = 0; i < num; i++) {
+			list.add(i);
+		}
+		assertEquals(50000,ListUtil.binarySearch(list.toArray(new Integer[0]), 50000));
+		assertEquals(-1,ListUtil.binarySearch(list.toArray(new Integer[0]), -5));
+	}
 	
 	
 	
