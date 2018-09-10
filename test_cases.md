@@ -2,7 +2,7 @@
 
 ## Count Unique
 
-| Take case           | Case   | Return |
+| Test case           | Case   | Return |
 | ---                 | ---    | ---      |
 | Empty list    | [ ] | 0 |
 | Null | Null  | IllegalArgumentException  |
@@ -13,7 +13,7 @@
 
 ## Binary Search
 
-| Take case           | Case   | Return |
+| Test case           | Case   | Return |
 | ---                 | ---    | ---      |
 | Binary search    | ["a","b","c","d"] search "c" | 2 |
 | Sort binary search | ["z","a","d","b"] search "z" | 3  |
